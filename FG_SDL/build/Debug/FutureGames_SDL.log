@@ -1,0 +1,306 @@
+﻿  main.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory(162,5): warning C4365: 'argument': conversion from 'long' to 'unsigned int', signed/unsigned mismatch
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory(172,5): warning C4365: 'argument': conversion from 'long' to 'unsigned int', signed/unsigned mismatch
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\time.h(35,1): warning C4820: '_timespec64': '4' bytes padding added after data member '_timespec64::tv_nsec'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\time.h(42,5): warning C4820: 'timespec': '4' bytes padding added after data member 'timespec::tv_nsec'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\atomic(292,9): warning C4365: 'argument': conversion from 'long' to 'unsigned int', signed/unsigned mismatch
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\atomic(308,9): warning C4365: 'argument': conversion from 'long' to 'unsigned int', signed/unsigned mismatch
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\atomic(325,9): warning C4365: 'argument': conversion from 'long' to 'unsigned int', signed/unsigned mismatch
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\atomic(388,9): warning C4365: 'argument': conversion from 'long' to 'unsigned int', signed/unsigned mismatch
+C:\_Kiyoshi\C++\FG_SDL\include\SDL\begin_code.h(37,8): warning C4668: '__GNUC__' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+C:\_Kiyoshi\C++\FG_SDL\include\SDL\SDL_assert.h(72,9): warning C4668: '__GNUC__' is not defined as a preprocessor macro, replacing with '0' for '#if/#elif'
+C:\_Kiyoshi\C++\FG_SDL\include\SDL\SDL_assert.h(122,25): warning C4820: 'SDL_AssertData': '4' bytes padding added after data member 'SDL_AssertData::linenum'
+C:\_Kiyoshi\C++\FG_SDL\include\SDL\SDL_rwops.h(108,20): warning C4820: 'SDL_RWops::<unnamed-tag>': '4' bytes padding added after data member 'SDL_RWops::<unnamed-tag>::append'
+C:\_Kiyoshi\C++\FG_SDL\include\SDL\SDL_rwops.h(147,13): warning C4820: 'SDL_RWops': '4' bytes padding added after data member 'SDL_RWops::type'
+C:\_Kiyoshi\C++\FG_SDL\include\SDL\SDL_audio.h(241,21): warning C4820: 'SDL_AudioCVT': '4' bytes padding added after data member 'SDL_AudioCVT::len_mult'
+C:\_Kiyoshi\C++\FG_SDL\include\SDL\SDL_audio.h(244,1): warning C4820: 'SDL_AudioCVT': '4' bytes padding added after data member 'SDL_AudioCVT::filter_index'
+C:\_Kiyoshi\C++\FG_SDL\include\SDL\SDL_pixels.h(321,22): warning C4820: 'SDL_Palette': '4' bytes padding added after data member 'SDL_Palette::ncolors'
+C:\_Kiyoshi\C++\FG_SDL\include\SDL\SDL_pixels.h(332,25): warning C4820: 'SDL_PixelFormat': '4' bytes padding added after data member 'SDL_PixelFormat::format'
+C:\_Kiyoshi\C++\FG_SDL\include\SDL\SDL_surface.h(73,28): warning C4820: 'SDL_Surface': '4' bytes padding added after data member 'SDL_Surface::flags'
+C:\_Kiyoshi\C++\FG_SDL\include\SDL\SDL_surface.h(76,17): warning C4820: 'SDL_Surface': '4' bytes padding added after data member 'SDL_Surface::pitch'
+C:\_Kiyoshi\C++\FG_SDL\include\SDL\SDL_surface.h(85,23): warning C4820: 'SDL_Surface': '4' bytes padding added after data member 'SDL_Surface::locked'
+C:\_Kiyoshi\C++\FG_SDL\include\SDL\SDL_surface.h(95,1): warning C4820: 'SDL_Surface': '4' bytes padding added after data member 'SDL_Surface::refcount'
+C:\_Kiyoshi\C++\FG_SDL\include\SDL\SDL_keyboard.h(52,18): warning C4820: 'SDL_Keysym': '2' bytes padding added after data member 'SDL_Keysym::mod'
+C:\_Kiyoshi\C++\FG_SDL\include\SDL\SDL_touch.h(58,1): warning C4820: 'SDL_Finger': '4' bytes padding added after data member 'SDL_Finger::pressure'
+C:\_Kiyoshi\C++\FG_SDL\include\SDL\SDL_events.h(501,1): warning C4820: 'SDL_MultiGestureEvent': '4' bytes padding added after data member 'SDL_MultiGestureEvent::padding'
+C:\_Kiyoshi\C++\FG_SDL\include\SDL\SDL_events.h(531,1): warning C4820: 'SDL_DropEvent': '4' bytes padding added after data member 'SDL_DropEvent::windowID'
+C:\_Kiyoshi\C++\FG_SDL\include\SDL\SDL_haptic.h(462,18): warning C4820: 'SDL_HapticDirection': '3' bytes padding added after data member 'SDL_HapticDirection::type'
+C:\_Kiyoshi\C++\FG_SDL\include\SDL\SDL_haptic.h(481,34): warning C4820: 'SDL_HapticConstant': '2' bytes padding added after data member 'SDL_HapticConstant::type'
+C:\_Kiyoshi\C++\FG_SDL\include\SDL\SDL_haptic.h(564,34): warning C4820: 'SDL_HapticPeriodic': '2' bytes padding added after data member 'SDL_HapticPeriodic::type'
+C:\_Kiyoshi\C++\FG_SDL\include\SDL\SDL_haptic.h(585,1): warning C4820: 'SDL_HapticPeriodic': '2' bytes padding added after data member 'SDL_HapticPeriodic::fade_level'
+C:\_Kiyoshi\C++\FG_SDL\include\SDL\SDL_haptic.h(616,34): warning C4820: 'SDL_HapticCondition': '2' bytes padding added after data member 'SDL_HapticCondition::type'
+C:\_Kiyoshi\C++\FG_SDL\include\SDL\SDL_haptic.h(633,1): warning C4820: 'SDL_HapticCondition': '2' bytes padding added after data member 'SDL_HapticCondition::center'
+C:\_Kiyoshi\C++\FG_SDL\include\SDL\SDL_haptic.h(652,34): warning C4820: 'SDL_HapticRamp': '2' bytes padding added after data member 'SDL_HapticRamp::type'
+C:\_Kiyoshi\C++\FG_SDL\include\SDL\SDL_haptic.h(671,1): warning C4820: 'SDL_HapticRamp': '2' bytes padding added after data member 'SDL_HapticRamp::fade_level'
+C:\_Kiyoshi\C++\FG_SDL\include\SDL\SDL_haptic.h(691,18): warning C4820: 'SDL_HapticLeftRight': '2' bytes padding added after data member 'SDL_HapticLeftRight::type'
+C:\_Kiyoshi\C++\FG_SDL\include\SDL\SDL_haptic.h(717,34): warning C4820: 'SDL_HapticCustom': '2' bytes padding added after data member 'SDL_HapticCustom::type'
+C:\_Kiyoshi\C++\FG_SDL\include\SDL\SDL_haptic.h(729,18): warning C4820: 'SDL_HapticCustom': '1' bytes padding added after data member 'SDL_HapticCustom::channels'
+C:\_Kiyoshi\C++\FG_SDL\include\SDL\SDL_haptic.h(731,17): warning C4820: 'SDL_HapticCustom': '4' bytes padding added after data member 'SDL_HapticCustom::samples'
+C:\_Kiyoshi\C++\FG_SDL\include\SDL\SDL_hidapi.h(92,27): warning C4820: 'SDL_hid_device_info': '4' bytes padding added after data member 'SDL_hid_device_info::product_id'
+C:\_Kiyoshi\C++\FG_SDL\include\SDL\SDL_hidapi.h(97,33): warning C4820: 'SDL_hid_device_info': '6' bytes padding added after data member 'SDL_hid_device_info::release_number'
+C:\_Kiyoshi\C++\FG_SDL\include\SDL\SDL_hidapi.h(121,37): warning C4820: 'SDL_hid_device_info': '4' bytes padding added after data member 'SDL_hid_device_info::interface_protocol'
+C:\_Kiyoshi\C++\FG_SDL\include\SDL\SDL_messagebox.h(97,23): warning C4820: '<unnamed-tag>': '4' bytes padding added after data member '<unnamed-tag>::flags'
+C:\_Kiyoshi\C++\FG_SDL\include\SDL\SDL_messagebox.h(102,44): warning C4820: '<unnamed-tag>': '4' bytes padding added after data member '<unnamed-tag>::numbuttons'
+C:\_Kiyoshi\C++\FG_SDL\src\Library\Vector3.h(51,12): warning C5219: implicit conversion from 'int' to 'float', possible loss of data
+C:\_Kiyoshi\C++\FG_SDL\src\Library\Vector3.h(52,12): warning C5219: implicit conversion from 'int' to 'float', possible loss of data
+C:\_Kiyoshi\C++\FG_SDL\src\Library\Vector3.h(53,12): warning C5219: implicit conversion from 'int' to 'float', possible loss of data
+C:\_Kiyoshi\C++\FG_SDL\src\Library\Vector3.h(60,12): warning C5219: implicit conversion from 'int' to 'float', possible loss of data
+C:\_Kiyoshi\C++\FG_SDL\src\Library\Vector3.h(61,12): warning C5219: implicit conversion from 'int' to 'float', possible loss of data
+C:\_Kiyoshi\C++\FG_SDL\src\Library\Vector3.h(62,12): warning C5219: implicit conversion from 'int' to 'float', possible loss of data
+C:\_Kiyoshi\C++\FG_SDL\src\main.cpp(53,71): warning C5219: implicit conversion from 'Uint64' to 'float', possible loss of data
+C:\_Kiyoshi\C++\FG_SDL\src\main.cpp(141,82): warning C4365: 'argument': conversion from 'int' to 'Uint8', signed/unsigned mismatch
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(311,37): warning C4514: 'vfwprintf': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(342,41): warning C4514: 'vfwprintf_s': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(373,37): warning C4514: '_vfwprintf_p': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(387,37): warning C4514: '_vwprintf_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(401,37): warning C4514: 'vwprintf': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(414,37): warning C4514: '_vwprintf_s_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(430,41): warning C4514: 'vwprintf_s': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(445,37): warning C4514: '_vwprintf_p_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(459,37): warning C4514: '_vwprintf_p': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(472,37): warning C4514: '_fwprintf_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(491,37): warning C4514: 'fwprintf': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(509,37): warning C4514: '_fwprintf_s_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(530,41): warning C4514: 'fwprintf_s': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(550,37): warning C4514: '_fwprintf_p_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(569,37): warning C4514: '_fwprintf_p': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(587,37): warning C4514: '_wprintf_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(605,37): warning C4514: 'wprintf': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(622,37): warning C4514: '_wprintf_s_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(642,41): warning C4514: 'wprintf_s': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(661,37): warning C4514: '_wprintf_p_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(679,37): warning C4514: '_wprintf_p': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(728,37): warning C4514: 'vfwscanf': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(761,41): warning C4514: 'vfwscanf_s': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(776,37): warning C4514: '_vwscanf_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(790,37): warning C4514: 'vwscanf': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(803,37): warning C4514: '_vwscanf_s_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(819,41): warning C4514: 'vwscanf_s': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(834,37): warning C4514: '_fwscanf_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(853,37): warning C4514: 'fwscanf': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(871,37): warning C4514: '_fwscanf_s_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(892,41): warning C4514: 'fwscanf_s': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(912,37): warning C4514: '_wscanf_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(930,37): warning C4514: 'wscanf': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(947,37): warning C4514: '_wscanf_s_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(967,41): warning C4514: 'wscanf_s': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(1094,37): warning C4514: '_vsnwprintf_s': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(1122,37): warning C4514: '_vsnwprintf': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(1171,37): warning C4514: '_vswprintf_c': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(1223,37): warning C4514: '_vswprintf': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(1276,41): warning C4514: 'vswprintf_s': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(1323,37): warning C4514: '_vswprintf_p': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(1358,37): warning C4514: '_vscwprintf': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(1391,37): warning C4514: '_vscwprintf_p': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(1405,37): warning C4514: '__swprintf_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(1425,37): warning C4514: '_swprintf_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(1446,37): warning C4514: '_swprintf': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(1465,37): warning C4514: 'swprintf': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(1508,37): warning C4514: '_swprintf_s_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(1530,41): warning C4514: 'swprintf_s': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(1559,37): warning C4514: '_swprintf_p_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(1580,37): warning C4514: '_swprintf_p': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(1600,37): warning C4514: '_swprintf_c_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(1621,37): warning C4514: '_swprintf_c': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(1641,37): warning C4514: '_snwprintf_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(1667,37): warning C4514: '_snwprintf': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(1692,37): warning C4514: '_snwprintf_s_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(1714,37): warning C4514: '_snwprintf_s': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(1742,37): warning C4514: '_scwprintf_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(1761,37): warning C4514: '_scwprintf': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(1779,37): warning C4514: '_scwprintf_p_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(1798,37): warning C4514: '_scwprintf_p': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(1822,24): warning C4514: 'swprintf': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(1837,34): warning C4514: 'vswprintf': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(1848,24): warning C4514: '_swprintf_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(1863,34): warning C4514: '_vswprintf_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(1921,37): warning C4514: 'vswscanf': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(1956,41): warning C4514: 'vswscanf_s': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(2019,37): warning C4514: '_swscanf_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(2039,37): warning C4514: 'swscanf': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(2058,37): warning C4514: '_swscanf_s_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(2080,41): warning C4514: 'swscanf_s': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(2101,37): warning C4514: '_snwscanf_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(2127,37): warning C4514: '_snwscanf': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(2152,37): warning C4514: '_snwscanf_s_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstdio.h(2173,37): warning C4514: '_snwscanf_s': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(646,37): warning C4514: 'vfprintf': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(677,41): warning C4514: 'vfprintf_s': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(708,37): warning C4514: '_vfprintf_p': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(722,37): warning C4514: '_vprintf_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(736,37): warning C4514: 'vprintf': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(749,37): warning C4514: '_vprintf_s_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(765,41): warning C4514: 'vprintf_s': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(780,37): warning C4514: '_vprintf_p_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(794,37): warning C4514: '_vprintf_p': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(807,37): warning C4514: '_fprintf_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(826,37): warning C4514: 'fprintf': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(850,37): warning C4514: '_fprintf_s_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(871,41): warning C4514: 'fprintf_s': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(891,37): warning C4514: '_fprintf_p_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(910,37): warning C4514: '_fprintf_p': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(928,37): warning C4514: '_printf_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(946,37): warning C4710: 'int printf(const char *const ,...)': function not inlined
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(946): message : see declaration of 'printf'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(963,37): warning C4514: '_printf_s_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(983,41): warning C4514: 'printf_s': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(1002,37): warning C4514: '_printf_p_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(1020,37): warning C4514: '_printf_p': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(1068,37): warning C4514: 'vfscanf': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(1102,41): warning C4514: 'vfscanf_s': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(1118,37): warning C4514: '_vscanf_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(1132,37): warning C4514: 'vscanf': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(1145,37): warning C4514: '_vscanf_s_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(1161,41): warning C4514: 'vscanf_s': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(1176,37): warning C4514: '_fscanf_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(1195,37): warning C4514: 'fscanf': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(1213,37): warning C4514: '_fscanf_s_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(1234,41): warning C4514: 'fscanf_s': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(1254,37): warning C4514: '_scanf_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(1272,37): warning C4514: 'scanf': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(1289,37): warning C4514: '_scanf_s_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(1309,41): warning C4514: 'scanf_s': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(1467,37): warning C4514: 'vsprintf': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(1508,41): warning C4514: 'vsprintf_s': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(1555,37): warning C4514: '_vsprintf_p': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(1593,37): warning C4514: '_vsnprintf_s': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(1621,41): warning C4514: 'vsnprintf_s': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(1666,37): warning C4514: '_vscprintf': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(1731,37): warning C4514: '_vsnprintf_c': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(1747,37): warning C4514: '_sprintf_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(1772,37): warning C4514: 'sprintf': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(1808,37): warning C4514: '_sprintf_s_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(1831,41): warning C4710: 'int sprintf_s(char *const ,const size_t,const char *const ,...)': function not inlined
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(1831): message : see declaration of 'sprintf_s'
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(1860,37): warning C4514: '_sprintf_p_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(1881,37): warning C4514: '_sprintf_p': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(1901,37): warning C4514: '_snprintf_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(1938,37): warning C4514: 'snprintf': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(1959,37): warning C4514: '_snprintf': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(1989,37): warning C4514: '_snprintf_c_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(2010,37): warning C4514: '_snprintf_c': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(2030,37): warning C4514: '_snprintf_s_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(2052,37): warning C4514: '_snprintf_s': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(2080,37): warning C4514: '_scprintf_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(2098,37): warning C4514: '_scprintf': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(2115,37): warning C4514: '_scprintf_p_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(2133,37): warning C4514: '_scprintf_p': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(2181,37): warning C4514: 'vsscanf': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(2242,37): warning C4514: '_sscanf_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(2261,37): warning C4514: 'sscanf': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(2279,37): warning C4514: '_sscanf_s_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(2300,41): warning C4514: 'sscanf_s': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(2328,37): warning C4514: '_snscanf_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(2352,37): warning C4514: '_snscanf': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(2376,37): warning C4514: '_snscanf_s_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdio.h(2400,37): warning C4514: '_snscanf_s': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_math.h(289,31): warning C4514: 'fpclassify': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_math.h(294,31): warning C4514: 'fpclassify': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_math.h(299,31): warning C4514: 'fpclassify': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_math.h(304,32): warning C4514: 'signbit': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_math.h(309,32): warning C4514: 'signbit': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_math.h(314,32): warning C4514: 'signbit': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_math.h(319,31): warning C4514: '_fpcomp': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_math.h(324,31): warning C4514: '_fpcomp': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_math.h(329,31): warning C4514: '_fpcomp': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_math.h(802,51): warning C4514: 'ceill': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_math.h(807,51): warning C4514: '_chgsignl': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_math.h(814,51): warning C4514: '_copysignl': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_math.h(847,51): warning C4514: 'floorl': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_math.h(868,51): warning C4514: '_hypotl': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdlib.h(358,17): warning C4514: 'abs': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdlib.h(363,22): warning C4514: 'abs': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdlib.h(368,19): warning C4514: 'div': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\stdlib.h(373,20): warning C4514: 'div': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_memcpy_s.h(35,44): warning C4514: 'memcpy_s': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_memcpy_s.h(64,44): warning C4514: 'memmove_s': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_memory.h(100,28): warning C4514: 'memchr': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstring.h(166,38): warning C4514: 'wcsnlen_s': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstring.h(247,40): warning C4514: '_wcstok': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstring.h(261,35): warning C4514: 'wcstok': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstring.h(539,31): warning C4514: 'wcschr': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstring.h(545,31): warning C4514: 'wcspbrk': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstring.h(551,31): warning C4514: 'wcsrchr': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wstring.h(558,31): warning C4514: 'wcsstr': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\string.h(370,38): warning C4514: 'strnlen_s': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\string.h(503,28): warning C4514: 'strchr': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\string.h(509,28): warning C4514: 'strpbrk': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\string.h(515,28): warning C4514: 'strrchr': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\string.h(521,28): warning C4514: 'strstr': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wconio.h(100,37): warning C4514: '_vcwprintf': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wconio.h(127,37): warning C4514: '_vcwprintf_s': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wconio.h(154,37): warning C4514: '_vcwprintf_p': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wconio.h(167,37): warning C4514: '_cwprintf_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wconio.h(185,37): warning C4514: '_cwprintf': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wconio.h(202,37): warning C4514: '_cwprintf_s_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wconio.h(220,37): warning C4514: '_cwprintf_s': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wconio.h(237,37): warning C4514: '_cwprintf_p_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wconio.h(255,37): warning C4514: '_cwprintf_p': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wconio.h(303,37): warning C4514: '_vcwscanf': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wconio.h(335,37): warning C4514: '_vcwscanf_s': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wconio.h(348,37): warning C4514: '_cwscanf_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wconio.h(371,37): warning C4514: '_cwscanf': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wconio.h(393,37): warning C4514: '_cwscanf_s_l': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wconio.h(411,37): warning C4514: '_cwscanf_s': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wio.h(225,26): warning C4514: '_wopen': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wio.h(238,26): warning C4514: '_wsopen': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wtime.h(185,45): warning C4514: '_wctime': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\corecrt_wtime.h(192,43): warning C4514: '_wctime_s': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\sys\stat.h(234,39): warning C4514: 'fstat': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\sys\stat.h(239,39): warning C4514: 'stat': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\wchar.h(179,28): warning C4514: 'fwide': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\wchar.h(188,28): warning C4514: 'mbsinit': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\wchar.h(208,28): warning C4514: 'wmemcmp': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\wchar.h(237,24): warning C4514: 'wmemmove': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\wchar.h(267,48): warning C4514: 'wmemchr': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\time.h(475,41): warning C4514: 'ctime': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\time.h(486,42): warning C4514: 'difftime': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\time.h(495,46): warning C4514: 'gmtime': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\time.h(505,46): warning C4514: 'localtime': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\time.h(516,42): warning C4514: '_mkgmtime': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\time.h(524,42): warning C4514: 'mktime': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\time.h(531,42): warning C4514: 'time': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\time.h(539,39): warning C4514: 'timespec_get': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\time.h(549,47): warning C4514: 'ctime_s': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\time.h(559,47): warning C4514: 'gmtime_s': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\time.h(568,47): warning C4514: 'localtime_s': unreferenced inline function has been removed
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.16299.0\ucrt\ctype.h(175,28): warning C4514: '_ischartype_l': unreferenced inline function has been removed
+C:\_Kiyoshi\C++\FG_SDL\include\SDL\SDL_stdinc.h(479,23): warning C4514: 'SDL_memset4': unreferenced inline function has been removed
+C:\_Kiyoshi\C++\FG_SDL\include\SDL\SDL_stdinc.h(706,24): warning C4514: 'SDL_memcpy4': unreferenced inline function has been removed
+C:\_Kiyoshi\C++\FG_SDL\include\SDL\SDL_endian.h(266,1): warning C4514: 'SDL_SwapFloat': unreferenced inline function has been removed
+C:\_Kiyoshi\C++\FG_SDL\include\SDL\SDL_rect.h(99,27): warning C4514: 'SDL_PointInRect': unreferenced inline function has been removed
+C:\_Kiyoshi\C++\FG_SDL\include\SDL\SDL_rect.h(108,27): warning C4514: 'SDL_RectEmpty': unreferenced inline function has been removed
+C:\_Kiyoshi\C++\FG_SDL\include\SDL\SDL_rect.h(116,27): warning C4514: 'SDL_RectEquals': unreferenced inline function has been removed
+C:\_Kiyoshi\C++\FG_SDL\src\main.cpp(26): warning C4702: unreachable code
+C:\_Kiyoshi\C++\FG_SDL\src\main.cpp(44): warning C4702: unreachable code
+C:\_Kiyoshi\C++\FG_SDL\src\main.cpp(47): warning C4702: unreachable code
+C:\_Kiyoshi\C++\FG_SDL\src\main.cpp(60): warning C4702: unreachable code
+C:\_Kiyoshi\C++\FG_SDL\src\main.cpp(64): warning C4702: unreachable code
+C:\_Kiyoshi\C++\FG_SDL\src\main.cpp(69): warning C4702: unreachable code
+C:\_Kiyoshi\C++\FG_SDL\src\main.cpp(72): warning C4702: unreachable code
+C:\_Kiyoshi\C++\FG_SDL\src\main.cpp(75): warning C4702: unreachable code
+C:\_Kiyoshi\C++\FG_SDL\src\main.cpp(77): warning C4702: unreachable code
+C:\_Kiyoshi\C++\FG_SDL\src\main.cpp(79): warning C4702: unreachable code
+C:\_Kiyoshi\C++\FG_SDL\src\main.cpp(81): warning C4702: unreachable code
+C:\_Kiyoshi\C++\FG_SDL\src\main.cpp(83): warning C4702: unreachable code
+C:\_Kiyoshi\C++\FG_SDL\src\main.cpp(85): warning C4702: unreachable code
+C:\_Kiyoshi\C++\FG_SDL\src\main.cpp(87): warning C4702: unreachable code
+C:\_Kiyoshi\C++\FG_SDL\src\main.cpp(89): warning C4702: unreachable code
+C:\_Kiyoshi\C++\FG_SDL\src\main.cpp(96): warning C4702: unreachable code
+C:\_Kiyoshi\C++\FG_SDL\src\main.cpp(100): warning C4702: unreachable code
+C:\_Kiyoshi\C++\FG_SDL\src\main.cpp(102): warning C4702: unreachable code
+C:\_Kiyoshi\C++\FG_SDL\src\main.cpp(104): warning C4702: unreachable code
+C:\_Kiyoshi\C++\FG_SDL\src\main.cpp(106): warning C4702: unreachable code
+C:\_Kiyoshi\C++\FG_SDL\src\main.cpp(108): warning C4702: unreachable code
+C:\_Kiyoshi\C++\FG_SDL\src\main.cpp(110): warning C4702: unreachable code
+C:\_Kiyoshi\C++\FG_SDL\src\main.cpp(112): warning C4702: unreachable code
+C:\_Kiyoshi\C++\FG_SDL\src\main.cpp(119): warning C4702: unreachable code
+C:\_Kiyoshi\C++\FG_SDL\src\main.cpp(123): warning C4702: unreachable code
+C:\_Kiyoshi\C++\FG_SDL\src\main.cpp(125): warning C4702: unreachable code
+C:\_Kiyoshi\C++\FG_SDL\src\main.cpp(127): warning C4702: unreachable code
+C:\_Kiyoshi\C++\FG_SDL\src\main.cpp(129): warning C4702: unreachable code
+C:\_Kiyoshi\C++\FG_SDL\src\main.cpp(131): warning C4702: unreachable code
+C:\_Kiyoshi\C++\FG_SDL\src\main.cpp(133): warning C4702: unreachable code
+C:\_Kiyoshi\C++\FG_SDL\src\main.cpp(135): warning C4702: unreachable code
+C:\_Kiyoshi\C++\FG_SDL\src\main.cpp(138): warning C4702: unreachable code
+  FutureGames_SDL.vcxproj -> C:\_Kiyoshi\C++\FG_SDL\bin\Game_Debug.exe
