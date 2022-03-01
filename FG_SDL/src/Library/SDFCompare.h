@@ -1,8 +1,10 @@
 #pragma once
 
 #include "Vector3.h"
+#include "CircleSDF.h"
+#include "RectangleSDF.h"
 
-bool CheckCollision(const CircleCollider& other)
+bool CheckCollision(CircleSDF &circle, RectangleSDF & rect)
 {
-	return VectorDistance(other.center, center) <= radius + other.radius;
+	return false;
 }

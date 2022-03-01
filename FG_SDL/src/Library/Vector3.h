@@ -9,6 +9,15 @@ struct Vector3
 	float z = 0;
 };
 
+Vector3 VectorAbs(Vector3 v)
+{
+	return {
+		std::abs(v.x),
+		std::abs(v.y),
+		std::abs(v.z)
+	};
+}
+
 Vector3 operator+(Vector3 left, Vector3 right)
 {
 	return {

@@ -93,7 +93,10 @@
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Library\CircleSDF.h" />
+    <ClInclude Include="src\Library\SDFCompare.h" />
     <ClInclude Include="src\Library\SimpleObject.h" />
+    <ClInclude Include="src\Library\RectangleSDF.h" />
     <ClInclude Include="src\Library\Vector3.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
