@@ -36,7 +36,6 @@ void Player::draw()
 	// SDL_SetRenderDrawColor(render, rand() & 0xFF, rand() & 0xFF, rand() & 0xFF, 255);
 	// SDL_SetRenderDrawColor(render, 200, 0, 20, 255);
 
-
 	SDL_SetRenderDrawColor(render, 150, 25, 40, 255);
 	SDL_Rect rect = { (int)x , (int)y , 32 ,32 };
 	SDL_RenderFillRect(render, &rect);
