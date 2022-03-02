@@ -3,8 +3,12 @@
 #include <SDL/SDL.h>
 #include <stdlib.h>
 #include "Library/Vector3.h"
+#include "engine.h"
+#include "player.h"
+#include "game.h"
 
-int main()
+
+void SDFCheck()
 {
 	Vector3 thing1;
 	thing1.x = 1;
@@ -20,42 +24,30 @@ int main()
 
 	std::cout << "Vector result = " << thing3.x << "," << thing3.y << "," << thing3.z << std::endl;
 	std::cout << "Dot result = " << VectorDot(thing1, thing2) << std::endl;
+}
 
-	return 0;
-
+int main()
+{
 	SDL_Init(SDL_INIT_EVERYTHING);
 
 	// Title, x, y, width, height, flags
-	SDL_Window* wnd = SDL_CreateWindow("Game", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 800, 600, 0);
-	SDL_Renderer* render = SDL_CreateRenderer(wnd, -1, SDL_RENDERER_ACCELERATED);
+	window = SDL_CreateWindow("Game", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 800, 600, 0);
+	render = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 
-	float x = 0;
-	float y = 0;
-
-	bool pressing_w = false;
-	bool pressing_a = false;
-	bool pressing_s = false;
-	bool pressing_d = false;
-
+	bool running = true;
 	Uint64 prevTicks = SDL_GetPerformanceCounter();
 
 	// To keep the program running:
-	bool running = true;
 	while (running)
 	{
 		// Get kernel ticks
 		Uint64 ticks = SDL_GetPerformanceCounter();
-
 		Uint64 deltaTicks = ticks - prevTicks;
-		printf("delta ticks= %lld\n", deltaTicks);
 		prevTicks = ticks;
-
-		float deltaSeconds = (float)deltaTicks / SDL_GetPerformanceFrequency();
-		printf("delta time = %f\n", deltaSeconds);
-		printf("FPS = %f\n", 1.0f / deltaSeconds);
+		deltaTime = (float)deltaTicks / SDL_GetPerformanceFrequency();
 
 		SDL_Event event;
-		if (SDL_PollEvent(&event))
+		while (SDL_PollEvent(&event))
 		{
 			switch (event.type)
 			{
@@ -72,83 +64,32 @@ int main()
 					running = false;
 				}
 
-				if (scancode == SDL_SCANCODE_D)
-				{
-					pressing_d = true;
-				}
-				if (scancode == SDL_SCANCODE_A)
-				{
-					pressing_a = true;
-				}
-				if (scancode == SDL_SCANCODE_W)
-				{
-					pressing_w = true;
-				}
-				if (scancode == SDL_SCANCODE_S)
-				{
-					pressing_s = true;
-				}
+				keys[scancode] = true;
 
 				break;
 			}
 			case SDL_KEYUP:
 			{
 				int scancode = event.key.keysym.scancode;
+				keys[scancode] = false;
 
-				if (scancode == SDL_SCANCODE_W)
-				{
-					pressing_w = false;
-				}
-				if (scancode == SDL_SCANCODE_A)
-				{
-					pressing_a = false;
-				}
-				if (scancode == SDL_SCANCODE_S)
-				{
-					pressing_s = false;
-				}
-				if (scancode == SDL_SCANCODE_D)
-				{
-					pressing_d = false;
-				}
+				break;
 			}
 
 			}
-		}
-
-		float speed = 32 * deltaSeconds;
-
-		if (pressing_w)
-		{
-			y -= speed;
-		}
-		if (pressing_a)
-		{
-			x -= speed;
-		}
-		if (pressing_s)
-		{
-			y += speed;
-		}
-		if (pressing_d)
-		{
-			x += speed;
 		}
 
 		SDL_SetRenderDrawColor(render, 20, 20, 30, 255); // #FF00FFFF
 		SDL_RenderClear(render);
 
-		SDL_SetRenderDrawColor(render, rand() & 0xFF, rand() & 0xFF, rand() & 0xFF, 255);
-		// SDL_SetRenderDrawColor(render, 200, 0, 20, 255);
+		player.update();
+		player.draw();
+
+		projectile.update();
+		projectile.draw();
 
 		SDL_RenderPresent(render);
 
-		SDL_Rect rect = { (int)x, (int)y, 32, 32 };
-
-		SDL_RenderFillRect(render, &rect);
-
-		SDL_RenderPresent(render);
-
-		// SDL_Delay(16);
+		SDL_Delay(16);
 	}
 }
