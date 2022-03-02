@@ -2,15 +2,10 @@
 
 #include "Vector3.h"
 
-class SimpleObject2D
+struct SimpleObject2D
 {
-private:
-	Vector3 position;
-	float rotation;
+	Vector3 position = { 0.0f, 0.0f, 0.0f };
+	float rotation = 0;
 
-	SimpleObject2D() {}
-	~SimpleObject2D() {}
-
-
-
+	void draw();
 };
