@@ -18,6 +18,15 @@ Vector3 VectorAbs(Vector3 v)
 	};
 }
 
+Vector3 operator+=(Vector3 left, Vector3 right)
+{
+	return {
+	left.x + right.x,
+	left.y + right.y,
+	left.z + right.z
+	};
+}
+
 Vector3 operator+(Vector3 left, Vector3 right)
 {
 	return {

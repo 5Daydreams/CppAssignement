@@ -99,12 +99,6 @@
   <ItemGroup>
     <ClInclude Include="src\engine.h" />
     <ClInclude Include="src\game.h" />
-    <ClInclude Include="src\Library\CircleSDF.h" />
-    <ClInclude Include="src\Library\Ball.h" />
-    <ClInclude Include="src\Library\SDFCompare.h" />
-    <ClInclude Include="src\Library\SimpleObject.h" />
-    <ClInclude Include="src\Library\RectangleSDF.h" />
-    <ClInclude Include="src\Library\Vector3.h" />
     <ClInclude Include="src\player.h" />
     <ClInclude Include="src\projectile.h" />
   </ItemGroup>
