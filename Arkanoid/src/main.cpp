@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <iostream>
-#include <SDL/SDL.h>
 #include <stdlib.h>
+#include <SDL/SDL.h>
 
 #include "engine.h"
 #include "player.h"
@@ -61,6 +61,11 @@ void LogicLoop()
 {
 	player.update();
 	ball.update();
+
+	// Debugs for the ball
+	//std::cout << deltaTime << " centerPos = ";
+	//std::cout << ball.center.x << "," << ball.center.y << "," << ball.center.z << std::endl;
+
 	projectile.update();
 }
 

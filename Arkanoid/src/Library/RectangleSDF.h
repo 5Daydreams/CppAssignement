@@ -2,9 +2,8 @@
 #include <algorithm>
 #include "Vector3.h"
 
-class RectangleSDF
+struct RectangleSDF
 {
-public:
 	Vector3 center;
 	Vector3 size;
 

@@ -1,9 +1,8 @@
 #pragma once
 #include "Vector3.h"
 
-class CircleSDF
+struct CircleSDF
 {
-public:
 	Vector3 center;
 	float radius;
 

@@ -44,15 +44,10 @@ bool CheckCollision(CircleSDF& circle, RectangleSDF& rect)
 	float distance = sqrt((distX * distX) + (distY * distY));
 
 	// if the distance is less than the radius, collision!
-	if (distance <= radius) 
+	if (distance <= radius)
 	{
 		return true;
 	}
 
 	return false;
-}
-
-Vector3 ReflectOnCollision()
-{
-
 }
