@@ -94,19 +94,13 @@
     <ClCompile Include="src\game.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\player.cpp" />
-    <ClCompile Include="src\projectile.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\engine.h" />
     <ClInclude Include="src\game.h" />
     <ClInclude Include="src\Library\Ball.h" />
-    <ClInclude Include="src\Library\CircleSDF.h" />
-    <ClInclude Include="src\Library\RectangleSDF.h" />
-    <ClInclude Include="src\Library\SDFCompare.h" />
-    <ClInclude Include="src\Library\SimpleObject.h" />
     <ClInclude Include="src\Library\Vector3.h" />
     <ClInclude Include="src\player.h" />
-    <ClInclude Include="src\projectile.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -16,14 +16,10 @@ void Player::update()
 	}
 
 	x += direction * speed * deltaTime;
-	paddleRect = { (int)(x - w / 2), (int)(y - h / 2), (int)w, (int)h };
 
-	if (keys[SDL_SCANCODE_SPACE])
-	{
-		projectile.alive = true;
-		projectile.x = x;
-		projectile.y = y;
-	}
+
+
+	paddleRect = { (int)(x - w / 2), (int)(y - h / 2), (int)w, (int)h };
 }
 
 void Player::draw()
@@ -37,5 +33,5 @@ void Player::draw()
 
 Player::Player()
 {
-	paddleRect = { (int)(x - w/2), (int)(y - h/2), (int)w, (int)h };
+	paddleRect = { (int)(x - w / 2), (int)(y - h / 2), (int)w, (int)h };
 }

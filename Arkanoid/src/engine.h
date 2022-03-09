@@ -2,6 +2,9 @@
 #include <SDL/SDL.h>
 
 extern SDL_Window* window;
+extern int windowX;
+extern int windowY;
+
 extern SDL_Renderer* render;
 
 // Array of bools for key inputs  

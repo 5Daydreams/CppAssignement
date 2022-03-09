@@ -1,23 +1,15 @@
 #pragma once
-#include <SDL/SDL.h>
 #include <iostream>
+#include <SDL/SDL.h>
 
-#include "CircleSDF.h"
-#include "RectangleSDF.h"
+#include "Vector3.h"
 #include "../engine.h"
 
 struct Ball
 {
 	Vector3 center = { 100.0f, 100.0f, 0.0f };
-	Vector3 velocity = { 100.0f, 100.0f, 0.0f };
-	float radius = 16.0f;
-
-	CircleSDF collider;
-
-	Ball()
-	{
-		collider = { center, radius };
-	}
+	Vector3 velocity = { 200.0f, 250.0f, 0.0f };
+	float radius = 8.0f;
 
 	void FlipVelocity(bool flipX, bool flipY)
 	{
@@ -35,6 +27,11 @@ struct Ball
 	void update()
 	{
 		center += velocity * deltaTime;
+
+		bool flipX = (center.x - radius < 0.0f) || (center.x + radius > (float)windowX);
+		bool flipY = (center.y - radius < 0.0f) || (center.y + radius > (float)windowY);
+
+		FlipVelocity(flipX, flipY);
 	}
 
 	// This draw call DRAWS CENTERED.
@@ -55,12 +52,13 @@ struct Ball
 		}
 	}
 
-	bool CheckCollisionSquare(RectangleSDF& rect)
+	bool CheckCollisionOnBlock(SDL_Rect rect, bool isPlayer)
 	{
-		float rectX = rect.center.x;
-		float rectY = rect.center.y;
-		float rectW = rect.size.x;
-		float rectH = rect.size.y;
+		// cache rect values
+		float rectX = rect.x;
+		float rectY = rect.y;
+		float rectW = rect.w;
+		float rectH = rect.h;
 
 		// cache the circle's center 
 		float testX = center.x;
@@ -94,10 +92,19 @@ struct Ball
 		// if the distance is less than the radius, collision!
 		if (distanceSquared <= radius * radius)
 		{
+			if (!isPlayer)
+			{
+				FlipVelocity(distX, distY);
+			}
+			else
+			{
+				velocity.x += (center.x - (rectX + rectW * 0.5f)) * 10.0f;
+				velocity.y += 8.0f;
+				FlipVelocity(false, velocity.y > 0);
+			}
 			return true;
 		}
 
 		return false;
 	}
-
 };

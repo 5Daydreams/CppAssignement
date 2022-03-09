@@ -14,7 +14,10 @@ void Initialize()
 	SDL_Init(SDL_INIT_EVERYTHING);
 
 	// Title, x, y, width, height, flags
-	window = SDL_CreateWindow("Game", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 800, 600, 0);
+	windowX = 800;
+	windowY = 600;
+
+	window = SDL_CreateWindow("Game", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, windowX, windowY, 0);
 	render = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 
 	APPLICATION_IS_RUNNING = true;
@@ -61,12 +64,11 @@ void LogicLoop()
 {
 	player.update();
 	ball.update();
+	ball.CheckCollisionOnBlock(player.paddleRect, true);
 
 	// Debugs for the ball
 	//std::cout << deltaTime << " centerPos = ";
 	//std::cout << ball.center.x << "," << ball.center.y << "," << ball.center.z << std::endl;
-
-	projectile.update();
 }
 
 void RenderLoop()
@@ -76,7 +78,6 @@ void RenderLoop()
 
 	player.draw();
 	ball.draw();
-	projectile.draw();
 
 	SDL_RenderPresent(render);
 }
