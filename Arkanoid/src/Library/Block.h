@@ -7,59 +7,41 @@
 #include "../engine.h"
 
 
-struct Ball
+struct Block
 {
-	Vector3 center = { 100.0f, 100.0f, 0.0f };
-	float radius = 8.0f;
+	Vector3 center = { 0.0f, 0.0f, 0.0f };
+	Vector3 size = { 100.0f, 20.0f, 0.0f };
+	int life = 3;
 
-	Vector3 velocityDir = { 0.6, 0.8, 0.0f };
-	float speed = 350.0f;
+	SDL_Rect blockRect;
 
-	Ball()
+	Block()
 	{
-		velocityDir.Normalize();
-		velocityDir.SetAngle(45);
+		blockRect = {
+			(int)(center.x - size.x * 0.5f),
+			(int)(center.y - size.y * 0.5f),
+			(int)(size.x),
+			(int)(size.y)
+		};
 	}
 
-	void FlipVelocity(bool flipX, bool flipY)
+	Block(Vector3 _center, Vector3 _size)
 	{
-		if (flipX)
-		{
-			velocityDir.x *= -1;
-		}
+		center = _center;
+		size = _size;
 
-		if (flipY)
-		{
-			velocityDir.y *= -1;
-		}
+		blockRect = {
+			(int)(center.x - size.x * 0.5f),
+			(int)(center.y - size.y * 0.5f),
+			(int)(size.x),
+			(int)(size.y)
+		};
 	}
 
-	void update()
-	{
-		center += (speed * deltaTime) * velocityDir;
-
-		bool flipX = (center.x - radius < 0.0f) || (center.x + radius > (float)windowX);
-		bool flipY = (center.y - radius < 0.0f) || (center.y + radius > (float)windowY);
-
-		FlipVelocity(flipX, flipY);
-	}
-
-	// This draw call DRAWS CENTERED.
 	void draw()
 	{
-		SDL_SetRenderDrawColor(render, 190, 30, 50, 255);
-		for (int w = 0; w < radius * 2; w++)
-		{
-			for (int h = 0; h < radius * 2; h++)
-			{
-				int dx = radius - w; // horizontal offset
-				int dy = radius - h; // vertical offset
-				if ((dx * dx + dy * dy) <= (radius * radius))
-				{
-					SDL_RenderDrawPoint(render, (int)center.x + dx, (int)center.y + dy);
-				}
-			}
-		}
+		SDL_SetRenderDrawColor(render, 230, 210, 40, 255);
+		SDL_RenderFillRect(render, &blockRect);
 	}
 
 	bool CheckCollisionOnBlock(SDL_Rect rect, bool isPlayer)

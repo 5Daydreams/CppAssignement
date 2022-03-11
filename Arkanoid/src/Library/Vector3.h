@@ -37,69 +37,109 @@ struct Vector3
 
 	Vector3& operator+=(Vector3 right)
 	{
-		return this = {
-		left.x + right.x,
-		left.y + right.y,
-		left.z + right.z
-		};
+		this->x += right.x;
+		this->y += right.y;
+		this->z += right.z;
+
+		return *this;
 	}
 
-	inline Vector3 operator*(Vector3 vec, float scalar)
+	Vector3& operator*(float scalar)
 	{
-		return {
-			vec.x *= scalar,
-			vec.y *= scalar,
-			vec.z *= scalar,
-		};
+		Vector3 vec = *this;
+
+		vec.x *= scalar;
+		vec.y *= scalar;
+		vec.z *= scalar;
+
+		return vec;
 	}
 
-	inline Vector3 operator*(float scalar, Vector3 vec)
+	friend Vector3& operator* (float scalar, Vector3 vec)
 	{
-		return {
-			vec.x *= scalar,
-			vec.y *= scalar,
-			vec.z *= scalar,
-		};
+		vec.x *= scalar;
+		vec.y *= scalar;
+		vec.z *= scalar;
+
+		return vec;
 	}
 
-	inline Vector3 operator*(Vector3 vec, int scalar)
+	Vector3 operator*(int scalar)
 	{
-		return {
-			vec.x *= scalar,
-			vec.y *= scalar,
-			vec.z *= scalar,
-		};
+		Vector3 vec = *this;
+
+		vec.x *= scalar;
+		vec.y *= scalar;
+		vec.z *= scalar;
+
+		return vec;
 	}
 
-	inline Vector3 operator*(int scalar, Vector3 vec)
-	{
-		return {
-			vec.x *= scalar,
-			vec.y *= scalar,
-			vec.z *= scalar,
-		};
-	}
-
-	inline float VectorDot(Vector3 left, Vector3 right)
+	float VectorDot(Vector3 left, Vector3 right)
 	{
 		return (left.x * right.x + left.y * right.y + left.z * right.z);
 	}
 
-	inline float VectorLength(Vector3 vec)
+	float VectorLength(Vector3 vec)
 	{
 		return std::sqrt(VectorDot(vec, vec));
 	}
 
-	inline float VectorDistance(Vector3 left, Vector3 right)
+	float VectorDistance(Vector3 left, Vector3 right)
 	{
 		Vector3 distVec = left - right;
 
 		return VectorLength(distVec);
 	}
 
-	inline float DotNormalized(Vector3 left, Vector3 right)
+	Vector3& Normalize()
+	{
+		float magnitude = VectorLength(*this);
+
+		this->x *= (1.0f / magnitude);
+		this->y *= (1.0f / magnitude);
+		this->z *= (1.0f / magnitude);
+
+		return *this;
+	}
+
+	Vector3 Normalized()
+	{
+		float magnitude = VectorLength(*this);
+		Vector3 vec = *this;
+
+		vec.x *= (1.0f / magnitude);
+		vec.y *= (1.0f / magnitude);
+		vec.z *= (1.0f / magnitude);
+
+		return vec;
+	}
+
+	float DotNormalized(Vector3 left, Vector3 right)
 	{
 		return (left.x * right.x + left.y * right.y + left.z * right.z);
+	}
+
+	Vector3& RotateDegrees2D(float angle)
+	{
+		angle *= M_PI / 180.0f;
+
+		this->x = this->x * cos(angle) - this->y * sin(angle);
+		this->y = this->x * sin(angle) + this->y * cos(angle);
+
+		return *this;
+	}
+
+	Vector3& SetAngle(float angle)
+	{
+		angle *= M_PI / 180.0f;
+
+		float vecLength = VectorLength(*this);
+
+		this->x = (vecLength)*cos(angle);
+		this->y = (vecLength)*sin(angle);
+
+		return *this;
 	}
 
 };

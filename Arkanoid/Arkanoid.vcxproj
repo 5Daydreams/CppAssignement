@@ -99,6 +99,7 @@
     <ClInclude Include="src\engine.h" />
     <ClInclude Include="src\game.h" />
     <ClInclude Include="src\Library\Ball.h" />
+    <ClInclude Include="src\Library\Block.h" />
     <ClInclude Include="src\Library\Vector3.h" />
     <ClInclude Include="src\player.h" />
   </ItemGroup>
