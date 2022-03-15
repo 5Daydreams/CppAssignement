@@ -9,7 +9,7 @@
 
 struct Ball
 {
-	Vector3 center = { 100.0f, 100.0f, 0.0f };
+	Vector3 center = { 400.0f, 500.0f, 0.0f };
 	float radius = 8.0f;
 
 	Vector3 velocityDir = { 0.6, 0.8, 0.0f };
@@ -110,6 +110,7 @@ struct Ball
 			{
 				speed += 8.0f;
 
+				
 				float deltaX = (center.x - (rectX + rectW * 0.5f));
 				float deltaY = (center.y - (rectY + rectH * 1.3f));
 

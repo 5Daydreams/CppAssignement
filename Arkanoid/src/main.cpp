@@ -13,15 +13,32 @@ void Initialize()
 {
 	SDL_Init(SDL_INIT_EVERYTHING);
 
-	// Title, x, y, width, height, flags
 	windowX = 800;
 	windowY = 600;
 
+	// Title, x, y, width, height, flags
 	window = SDL_CreateWindow("Game", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, windowX, windowY, 0);
 	render = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
 
 	APPLICATION_IS_RUNNING = true;
 
+	Vector3 blockSize{ 60,20,0 };
+	Vector3 startingOffset{ 105,30,0 };
+	Vector3 blockSpacing{ 5,5,0 };
+
+	for (int j = 0; j < BLOCK_COL_SIZE; j++)
+	{
+		for (int i = 0; i < BLOCK_ROW_SIZE; i++)
+		{
+			Vector3 blockPos = {
+				startingOffset.x + (blockSize.x + blockSpacing.x) * i ,
+				startingOffset.y + (blockSize.y + blockSpacing.y) * j ,
+				0.0f
+			};
+
+			blocks[BLOCK_ROW_SIZE * j + i] = Block(blockPos, blockSize);
+		}
+	}
 }
 
 void InputLoop()
@@ -66,6 +83,14 @@ void LogicLoop()
 	ball.update();
 	ball.CheckCollisionOnBlock(player.paddleRect, true);
 
+	for (int j = 0; j < BLOCK_COL_SIZE; j++)
+	{
+		for (int i = 0; i < BLOCK_ROW_SIZE; i++)
+		{
+			ball.CheckCollisionOnBlock(blocks[BLOCK_ROW_SIZE * j + i].blockRect, false);
+		}
+	}
+
 	// Debugs for the ball
 	//std::cout << deltaTime << " centerPos = ";
 	//std::cout << ball.center.x << "," << ball.center.y << "," << ball.center.z << std::endl;
@@ -78,6 +103,14 @@ void RenderLoop()
 
 	player.draw();
 	ball.draw();
+
+	for (int j = 0; j < BLOCK_COL_SIZE; j++)
+	{
+		for (int i = 0; i < BLOCK_ROW_SIZE; i++)
+		{
+			blocks[BLOCK_ROW_SIZE * j + i].draw();
+		}
+	}
 
 	SDL_RenderPresent(render);
 }
