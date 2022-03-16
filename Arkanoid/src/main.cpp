@@ -79,9 +79,7 @@ void InputLoop()
 
 void LogicLoop()
 {
-	player.update();
 	ball.CheckCollisionOnBlock(player.paddleRect, true);
-	ball.update();
 
 	bool blockWasHit = false;
 	for (int j = 0; j < BLOCK_COL_SIZE; j++)
@@ -96,6 +94,8 @@ void LogicLoop()
 		}
 	}
 
+	player.update();
+	ball.update();
 	// Debugs for the ball
 	//std::cout << deltaTime << " centerPos = ";
 	//std::cout << ball.center.x << "," << ball.center.y << "," << ball.center.z << std::endl;

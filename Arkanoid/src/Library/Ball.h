@@ -69,7 +69,7 @@ struct Ball
 		float rectW = rect.w;
 		float rectH = rect.h;
 
-		// cache the circle's center 
+		// cache the circle's sweep center 
 		float testX = center.x;
 		float testY = center.y;
 
@@ -103,13 +103,21 @@ struct Ball
 		{
 			if (!isPlayer)
 			{
-				FlipVelocity(distX, distY);
+				if (distanceSquared <= 1)
+				{
+					bool velocityIsHorizontal = velocityDir.x >= velocityDir.y;
+					FlipVelocity(velocityIsHorizontal, !velocityIsHorizontal);
+				}
+				else
+				{
+					FlipVelocity(distX, distY);
+				}
 			}
 			else
 			{
 				speed += 8.0f;
 
-				
+
 				float deltaX = (center.x - (rectX + rectW * 0.5f));
 				float deltaY = (center.y - (rectY + rectH * 1.3f));
 
