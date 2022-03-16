@@ -9,11 +9,14 @@
 
 struct Block
 {
+private:
+	SDL_Rect blockRect;
+
+public:
 	Vector3 center = { 0.0f, 0.0f, 0.0f };
 	Vector3 size = { 100.0f, 20.0f, 0.0f };
-	int life = 3;
-
-	SDL_Rect blockRect;
+	int life = 1;
+	bool isAlive = true;
 
 	Block()
 	{
@@ -38,17 +41,32 @@ struct Block
 		};
 	}
 
+	SDL_Rect GetBlockRect()
+	{
+		if (!isAlive)
+		{
+			return SDL_Rect{ -10, -10, 1, 1 };
+		}
+
+		return blockRect;
+	}
+
 	void takeDamage()
 	{
 		life--;
 		if (life <= 0)
 		{
-			// Destroy the block here
+			isAlive = false;
 		}
 	}
 
 	void draw()
 	{
+		if (!isAlive)
+		{
+			return;
+		}
+
 		SDL_SetRenderDrawColor(render, 230, 210, 40, 255);
 		SDL_RenderFillRect(render, &blockRect);
 	}

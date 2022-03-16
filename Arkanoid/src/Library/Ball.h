@@ -12,13 +12,12 @@ struct Ball
 	Vector3 center = { 400.0f, 500.0f, 0.0f };
 	float radius = 8.0f;
 
-	Vector3 velocityDir = { 0.6, 0.8, 0.0f };
-	float speed = 350.0f;
+	Vector3 velocityDir = { 0.1, 0.8, 0.0f };
+	float speed = 750.0f;
 
 	Ball()
 	{
 		velocityDir.Normalize();
-		velocityDir.SetAngle(45);
 	}
 
 	void FlipVelocity(bool flipX, bool flipY)

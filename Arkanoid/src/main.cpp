@@ -80,14 +80,19 @@ void InputLoop()
 void LogicLoop()
 {
 	player.update();
-	ball.update();
 	ball.CheckCollisionOnBlock(player.paddleRect, true);
+	ball.update();
 
+	bool blockWasHit = false;
 	for (int j = 0; j < BLOCK_COL_SIZE; j++)
 	{
 		for (int i = 0; i < BLOCK_ROW_SIZE; i++)
 		{
-			ball.CheckCollisionOnBlock(blocks[BLOCK_ROW_SIZE * j + i].blockRect, false);
+			blockWasHit = ball.CheckCollisionOnBlock(blocks[BLOCK_ROW_SIZE * j + i].GetBlockRect(), false);
+			if (blockWasHit)
+			{
+				blocks[BLOCK_ROW_SIZE * j + i].takeDamage();
+			}
 		}
 	}
 
