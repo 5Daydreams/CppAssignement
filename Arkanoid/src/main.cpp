@@ -22,9 +22,13 @@ void Initialize()
 
 	APPLICATION_IS_RUNNING = true;
 
-	Vector3 blockSize{ 60,20,0 };
-	Vector3 startingOffset{ 105,30,0 };
-	Vector3 blockSpacing{ 5,5,0 };
+	Ball firstBall = Ball();
+	balls.push_back(firstBall);
+
+	// Initializing blocks
+	Vector3 blockSize{ 75,25,0 };
+	Vector3 startingOffset{ 50,30,0 };
+	Vector3 blockSpacing{ 2,2,0 };
 
 	for (int j = 0; j < BLOCK_COL_SIZE; j++)
 	{
@@ -36,7 +40,11 @@ void Initialize()
 				0.0f
 			};
 
+			int lifeTrick = (i + j) % 2;
+
 			blocks[BLOCK_ROW_SIZE * j + i] = Block(blockPos, blockSize);
+			blocks[BLOCK_ROW_SIZE * j + i].life = (BLOCK_COL_SIZE - j) / 2 + lifeTrick * 2 + 1;
+			blocks[BLOCK_ROW_SIZE * j + i].maxLife = (BLOCK_COL_SIZE - j) / 2 + lifeTrick * 2 + 1;
 		}
 	}
 }
@@ -79,26 +87,48 @@ void InputLoop()
 
 void LogicLoop()
 {
-	ball.CheckCollisionOnBlock(player.paddleRect, true);
+	player.update();
 
-	bool blockWasHit = false;
-	for (int j = 0; j < BLOCK_COL_SIZE; j++)
+	if (balls.size() <= 0)
 	{
-		for (int i = 0; i < BLOCK_ROW_SIZE; i++)
-		{
-			blockWasHit = ball.CheckCollisionOnBlock(blocks[BLOCK_ROW_SIZE * j + i].GetBlockRect(), false);
-			if (blockWasHit)
-			{
-				blocks[BLOCK_ROW_SIZE * j + i].takeDamage();
-			}
-		}
+		return;
 	}
 
-	player.update();
-	ball.update();
-	// Debugs for the ball
-	//std::cout << deltaTime << " centerPos = ";
-	//std::cout << ball.center.x << "," << ball.center.y << "," << ball.center.z << std::endl;
+	for (int ball = balls.size() - 1; ball >= 0; ball--)
+	{
+		balls[ball].CollideWithPlayer(player.paddleRect);
+
+		for (int j = 0; j < BLOCK_COL_SIZE; j++)
+		{
+			for (int i = 0; i < BLOCK_ROW_SIZE; i++)
+			{
+				SDL_Rect currBlockRect = blocks[BLOCK_ROW_SIZE * j + i].GetBlockRect();
+				if (balls[ball].CollideWithBlock(currBlockRect))
+				{
+					blocks[BLOCK_ROW_SIZE * j + i].takeDamage();
+
+					bool blockIsDead = !blocks[BLOCK_ROW_SIZE * j + i].isAlive;
+					bool luckyPosition = ((i + j) % 7) == 0;
+
+					if ( (blockIsDead) && (luckyPosition) )
+					{
+						Ball newBall = Ball();
+						newBall.center = balls[ball].center;
+						newBall.velocityDir = balls[ball].velocityDir;
+						newBall.speed = balls[ball].speed * 0.9f;
+						balls.push_back(newBall);
+					}
+				}
+			}
+		}
+
+		balls[ball].update();
+
+		if (balls[ball].wentOutOfBounds)
+		{
+			balls.erase(balls.begin() + ball);
+		}
+	}
 }
 
 void RenderLoop()
@@ -107,7 +137,11 @@ void RenderLoop()
 	SDL_RenderClear(render);
 
 	player.draw();
-	ball.draw();
+	
+	for (int ball = 0; ball < balls.size(); ball++)
+	{
+		balls[ball].draw();
+	}
 
 	for (int j = 0; j < BLOCK_COL_SIZE; j++)
 	{

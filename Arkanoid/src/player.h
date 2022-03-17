@@ -3,14 +3,15 @@
 
 struct Player
 {
-	float x = 100;
-	float y = 500;
+	float x = 400;
+	float y = 550;
 
-	float speed = 500;
+	float speed = 700;
 	float w = 64;
 	float h = 16;
 
 	SDL_Rect paddleRect;
+	SDL_Rect innerRect;
 
 	Player();
 

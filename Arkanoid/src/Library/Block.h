@@ -15,11 +15,13 @@ private:
 public:
 	Vector3 center = { 0.0f, 0.0f, 0.0f };
 	Vector3 size = { 100.0f, 20.0f, 0.0f };
-	int life = 1;
+	int life = 3;
+	int maxLife;
 	bool isAlive = true;
 
 	Block()
 	{
+		maxLife = life;
 		blockRect = {
 			(int)(center.x - size.x * 0.5f),
 			(int)(center.y - size.y * 0.5f),
@@ -33,6 +35,7 @@ public:
 		center = _center;
 		size = _size;
 
+		maxLife = life;
 		blockRect = {
 			(int)(center.x - size.x * 0.5f),
 			(int)(center.y - size.y * 0.5f),
@@ -67,7 +70,11 @@ public:
 			return;
 		}
 
-		SDL_SetRenderDrawColor(render, 230, 210, 40, 255);
+		int r = 30 + (maxLife - life) * 20;
+		int g = 80 + maxLife * 15 - (maxLife - life) * 15;
+		int b = 50 - (maxLife - life) * 5;
+
+		SDL_SetRenderDrawColor(render, r , g, b, 255);
 		SDL_RenderFillRect(render, &blockRect);
 	}
 };

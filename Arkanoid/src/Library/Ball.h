@@ -9,15 +9,22 @@
 
 struct Ball
 {
-	Vector3 center = { 400.0f, 500.0f, 0.0f };
+	Vector3 center = { 400.0f, 300.0f, 0.0f };
 	float radius = 8.0f;
 
 	Vector3 velocityDir = { 0.1, 0.8, 0.0f };
-	float speed = 750.0f;
+	float speed = 450.0f;
+
+	bool wentOutOfBounds = false;
 
 	Ball()
 	{
 		velocityDir.Normalize();
+	}
+
+	void Speedup()
+	{
+		speed += 3.5f;
 	}
 
 	void FlipVelocity(bool flipX, bool flipY)
@@ -33,19 +40,59 @@ struct Ball
 		}
 	}
 
-	void update()
+	void CollideWithWindow()
 	{
-		center += (speed * deltaTime) * velocityDir;
+		bool lowX = (center.x - radius < 0.0f);
+		bool highX = (center.x + radius > (float)windowX);
 
-		bool flipX = (center.x - radius < 0.0f) || (center.x + radius > (float)windowX);
-		bool flipY = (center.y - radius < 0.0f) || (center.y + radius > (float)windowY);
+		bool lowY = (center.y - radius < 0.0f);
+		wentOutOfBounds = (center.y + radius > (float)windowY);
+
+		bool flipX = lowX || highX;
+		bool flipY = lowY;
 
 		FlipVelocity(flipX, flipY);
+
+		if (lowX)
+		{
+			center.x = radius;
+		}
+		else if (highX)
+		{
+			center.x = windowX - radius;
+		}
+
+		if (lowY)
+		{
+			center.y = radius;
+		}
+		//else if (wentOutOfBounds)
+		//{
+		//	center.y = windowY - radius;
+		//	wentOutOfBounds = true;
+		//}
+	}
+
+	void update()
+	{
+		if (wentOutOfBounds)
+		{
+			return;
+		}
+
+		center += (speed * deltaTime) * velocityDir;
+
+		CollideWithWindow();
 	}
 
 	// This draw call DRAWS CENTERED.
 	void draw()
 	{
+		if (wentOutOfBounds)
+		{
+			return;
+		}
+
 		SDL_SetRenderDrawColor(render, 190, 30, 50, 255);
 		for (int w = 0; w < radius * 2; w++)
 		{
@@ -61,7 +108,7 @@ struct Ball
 		}
 	}
 
-	bool CheckCollisionOnBlock(SDL_Rect rect, bool isPlayer)
+	void CollideWithPlayer(SDL_Rect rect)
 	{
 		// cache rect values
 		float rectX = rect.x;
@@ -101,34 +148,78 @@ struct Ball
 		// if the distance is less than the radius, collision!
 		if (distanceSquared <= radius * radius)
 		{
-			if (!isPlayer)
-			{
-				if (distanceSquared <= 1)
-				{
-					bool velocityIsHorizontal = velocityDir.x >= velocityDir.y;
-					FlipVelocity(velocityIsHorizontal, !velocityIsHorizontal);
-				}
-				else
-				{
-					FlipVelocity(distX, distY);
-				}
-			}
-			else
-			{
-				speed += 8.0f;
+			Speedup();
 
+			float deltaX = (center.x - (rectX + rectW * 0.5f));
+			float deltaY = (center.y - (rectY + rectH * 1.3f));
 
-				float deltaX = (center.x - (rectX + rectW * 0.5f));
-				float deltaY = (center.y - (rectY + rectH * 1.3f));
+			float paddleAngle = atan2f(deltaY, deltaX) * (180.0f / M_PI);
 
-				float paddleAngle = atan2f(deltaY, deltaX) * (180.0f / M_PI);
+			velocityDir.SetAngle(paddleAngle);
+			FlipVelocity(false, velocityDir.y > 0);
+		}
+	}
 
-				velocityDir.SetAngle(paddleAngle);
-				FlipVelocity(false, velocityDir.y > 0);
-			}
-			return true;
+	bool CollideWithBlock(SDL_Rect rect)
+	{
+		// cache rect values
+		float rectX = rect.x;
+		float rectY = rect.y;
+		float rectW = rect.w;
+		float rectH = rect.h;
+
+		// cache the circle's sweep center 
+		float sweepX = center.x + (speed * deltaTime * velocityDir.x);
+		float sweepY = center.y + (speed * deltaTime * velocityDir.y);
+
+		float testX = sweepX;
+		float testY = sweepY;
+
+		// which edge is closest?
+
+		// Check Horizontal
+		bool lowX = (center.x < rectX);
+		bool highX = (center.x > rectX + rectW);
+
+		if (lowX)
+		{
+			testX = rectX;      // test left edge
+		}
+		else if (highX)
+		{
+			testX = rectX + rectW;   // right edge
 		}
 
-		return false;
+		// Check Vertical
+		bool lowY = (center.y < rectY);
+		bool highY = (center.y > rectY + rectH);
+
+		if (lowY)
+		{
+			testY = rectY;      // top edge
+		}
+		else if (highY)
+		{
+			testY = rectY + rectH;   // bottom edge
+		}
+
+		// get distance from closest edges
+		float distX = sweepX - testX;
+		float distY = sweepY - testY;
+
+		float distanceSquared = (distX * distX) + (distY * distY);
+
+		bool collisionHappens = distanceSquared <= radius * radius;
+
+		// if the distance is less than the radius, collision!
+		if (collisionHappens)
+		{
+			Speedup();
+
+			FlipVelocity(distX, distY);
+			center += (deltaTime) * velocityDir;
+		}
+
+		return collisionHappens;
 	}
 };

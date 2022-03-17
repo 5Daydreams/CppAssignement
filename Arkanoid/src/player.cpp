@@ -17,21 +17,25 @@ void Player::update()
 
 	x += direction * speed * deltaTime;
 
-
-
-	paddleRect = { (int)(x - w / 2), (int)(y - h / 2), (int)w, (int)h };
+	paddleRect.x = x; // updating paddle position
+	innerRect.x = x + 2; // inner paddle has a small offset
 }
 
 void Player::draw()
 {
-	// SDL_SetRenderDrawColor(render, rand() & 0xFF, rand() & 0xFF, rand() & 0xFF, 255);
-	// SDL_SetRenderDrawColor(render, 200, 0, 20, 255);
-
-	SDL_SetRenderDrawColor(render, 30, 210, 190, 255);
+	// Draw outline
+	SDL_SetRenderDrawColor(render, 90, 170, 210, 255);
 	SDL_RenderFillRect(render, &paddleRect);
+
+	// Draw the inside of paddle
+	SDL_SetRenderDrawColor(render, 30, 110, 160, 255);
+	SDL_RenderFillRect(render, &innerRect);
 }
 
 Player::Player()
 {
 	paddleRect = { (int)(x - w / 2), (int)(y - h / 2), (int)w, (int)h };
+	int innerW = w - 4;
+	int innerH = h - 4;
+	innerRect = { (int)(x - innerW / 2), (int)(y - innerH / 2), (int)innerW, (int)innerH };
 }
