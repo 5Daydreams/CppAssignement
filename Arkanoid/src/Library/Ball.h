@@ -10,9 +10,9 @@
 struct Ball
 {
 	Vector3 center = { 400.0f, 300.0f, 0.0f };
-	float radius = 8.0f;
+	float radius = 7.0f;
 
-	Vector3 velocityDir = { 0.1, 0.8, 0.0f };
+	Vector3 velocityDir = { 0.04, 0.9, 0.0f };
 	float speed = 450.0f;
 
 	bool wentOutOfBounds = false;

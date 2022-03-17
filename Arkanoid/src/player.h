@@ -3,7 +3,7 @@
 
 struct Player
 {
-	float x = 400;
+	float x = 360;
 	float y = 550;
 
 	float speed = 700;
