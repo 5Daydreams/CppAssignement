@@ -9,19 +9,8 @@
 
 static bool APPLICATION_IS_RUNNING;
 
-void Initialize()
+void InitializeGame()
 {
-	SDL_Init(SDL_INIT_EVERYTHING);
-
-	windowX = 800;
-	windowY = 600;
-
-	// Title, x, y, width, height, flags
-	window = SDL_CreateWindow("Game", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, windowX, windowY, 0);
-	render = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
-
-	APPLICATION_IS_RUNNING = true;
-
 	Ball firstBall = Ball();
 	balls.push_back(firstBall);
 
@@ -47,6 +36,24 @@ void Initialize()
 			blocks[BLOCK_ROW_SIZE * j + i].maxLife = (BLOCK_COL_SIZE - j) / 2 + lifeTrick * 2 + 1;
 		}
 	}
+
+	resetAvailable = false;
+}
+
+void InitializeEngine()
+{
+	SDL_Init(SDL_INIT_EVERYTHING);
+
+	windowX = 800;
+	windowY = 600;
+
+	// Title, x, y, width, height, flags
+	window = SDL_CreateWindow("Game", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, windowX, windowY, 0);
+	render = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED);
+
+	APPLICATION_IS_RUNNING = true;
+
+	InitializeGame();
 }
 
 void InputLoop()
@@ -83,6 +90,12 @@ void InputLoop()
 
 		}
 	}
+
+	if (keys[SDL_SCANCODE_R] && resetAvailable)
+	{
+		player.x = windowX / 2 - player.w / 2;
+		InitializeGame();
+	}
 }
 
 void LogicLoop()
@@ -91,6 +104,7 @@ void LogicLoop()
 
 	if (balls.size() <= 0)
 	{
+		resetAvailable = true;
 		return;
 	}
 
@@ -110,7 +124,7 @@ void LogicLoop()
 					bool blockIsDead = !blocks[BLOCK_ROW_SIZE * j + i].isAlive;
 					bool luckyPosition = ((i + j) % 7) == 0;
 
-					if ( (blockIsDead) && (luckyPosition) )
+					if ((blockIsDead) && (luckyPosition))
 					{
 						Ball newBall = Ball();
 						newBall.center = balls[ball].center;
@@ -137,7 +151,7 @@ void RenderLoop()
 	SDL_RenderClear(render);
 
 	player.draw();
-	
+
 	for (int ball = 0; ball < balls.size(); ball++)
 	{
 		balls[ball].draw();
@@ -156,7 +170,7 @@ void RenderLoop()
 
 int main()
 {
-	Initialize();
+	InitializeEngine();
 
 	Uint64 prevTicks = SDL_GetPerformanceCounter();
 

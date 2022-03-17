@@ -7,6 +7,7 @@
 
 extern const int BLOCK_ROW_SIZE;
 extern const int BLOCK_COL_SIZE;
+extern bool resetAvailable;
 
 extern Player player;
 extern std::vector<Ball> balls;
