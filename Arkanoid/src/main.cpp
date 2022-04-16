@@ -31,7 +31,7 @@ void InitializeGame()
 
 			int lifeTrick = (i + j) % 2;
 
-			blocks[BLOCK_ROW_SIZE * j + i] = Block(blockPos, blockSize);
+			blocks[BLOCK_ROW_SIZE * j + i] = Block(blockPos, blockSize); // feedback: similar comment as in line 129 of this file about copying an instance.
 			blocks[BLOCK_ROW_SIZE * j + i].life = (BLOCK_COL_SIZE - j) / 2 + lifeTrick * 2 + 1;
 			blocks[BLOCK_ROW_SIZE * j + i].maxLife = (BLOCK_COL_SIZE - j) / 2 + lifeTrick * 2 + 1;
 		}
@@ -126,7 +126,9 @@ void LogicLoop()
 
 					if ((blockIsDead) && (luckyPosition))
 					{
-						Ball newBall = Ball();
+						Ball newBall = Ball(); // feedback: you don't need to explicitly call a constructor like this:
+												// when you declare Ball newBall, default constructor is called for it and the instance is initialized.
+												// currently it is being default constructed, then new instance is created and copied over to newBall.
 						newBall.center = balls[ball].center;
 						newBall.velocityDir = balls[ball].velocityDir;
 						newBall.speed = balls[ball].speed * 0.9f;
@@ -181,7 +183,9 @@ int main()
 		Uint64 ticks = SDL_GetPerformanceCounter();
 		Uint64 deltaTicks = ticks - prevTicks;
 		prevTicks = ticks;
-		deltaTime = (float)deltaTicks / SDL_GetPerformanceFrequency();
+		deltaTime = (float)deltaTicks / SDL_GetPerformanceFrequency(); // feedback: external linking makes it hard to track where this is used and declared.
+																		// usually delta time is delcared in main loop, and then passed as argument to all update
+																		// consumers
 
 		InputLoop();
 		LogicLoop();
