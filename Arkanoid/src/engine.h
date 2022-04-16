@@ -1,6 +1,8 @@
 #pragma once
 #include <SDL/SDL.h>
 
+// feedback: similar comment as in game.h. Use OOP and classes to make more structured code.
+
 extern SDL_Window* window;
 extern int windowX;
 extern int windowY;

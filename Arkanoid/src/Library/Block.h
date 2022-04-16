@@ -6,6 +6,8 @@
 #include "Vector3.h"
 #include "../engine.h"
 
+// feedback: is there a particualr reason this struct is defined in the header file? Common approach is to have declaration in header
+// and definition in .cpp file.
 
 struct Block
 {

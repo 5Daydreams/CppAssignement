@@ -6,6 +6,8 @@
 #include "Vector3.h"
 #include "../engine.h"
 
+// feedback: is there a particualr reason this struct is defined in the header file? Common approach is to have declaration in header
+// and definition in .cpp file.
 
 struct Ball
 {
@@ -162,6 +164,8 @@ struct Ball
 
 	bool CollideWithBlock(SDL_Rect rect)
 	{
+		// This looks a bit more complicated than it should be. Simple bounding box intersection test would be fine for this task I think.
+
 		// cache rect values
 		float rectX = rect.x;
 		float rectY = rect.y;
